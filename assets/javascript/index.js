@@ -30,5 +30,16 @@ const arrayBikes = [
     }
 ]
 
+for (let i = 0; i < arrayBikes.length; i++){
+    let userWeightInput = Number(prompt(`${`inserisci il peso di`} ${ arrayBikes[i].name}`))
+    arrayBikes[i].weight = userWeightInput
+}
+
+
+
+
+    
+
+    
 
 
