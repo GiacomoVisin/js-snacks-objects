@@ -57,3 +57,32 @@ for (let i=1; i < arrayBikes.length; i++){
 // Infine, creiamo un nuovo array i cui elementi contengono solo nomi e falli subiti e stampiamo tutto in console.
 
 
+const footballTeam = [
+    {
+        name: Juventus,
+        score: 0,
+        foul: 0
+    },
+    {
+        name: Napoli,
+        score: 0,
+        foul: 0
+    },
+    {
+        name: Milan,
+        score: 0,
+        foul: 0
+    },
+    {
+        name: Inter,
+        score: 0,
+        foul: 0
+    },
+    {
+        name: Roma,
+        score: 0,
+        foul: 0
+    }
+]
+
+
