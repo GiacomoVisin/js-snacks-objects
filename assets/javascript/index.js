@@ -5,52 +5,38 @@
 // Stampare a schermo la bici con peso minore.
 
 
- 
+
 let msg = alert(`inserisci i dati del primo array`)
 
 
 
-const arrayBikes = [
-    {
-       name: "bikeOne",
-       weight: ``   
-    },
+let numeroBici = Number(prompt("Quante bici vuoi inserire?"));
 
-    {
-       name: "bikeTwo",
-       weight: ``   
-    },
+const arrayBikes = []
 
-    {
-       name: "bikeThree",
-       weight: ``
-    },
-
-    {
-       name: "bikeFour",
-       weight: ``   
-    }
-]
-
-for (let i = 0; i < arrayBikes.length; i++){
-    let userWeightInput = Number(prompt(`${`inserisci il peso di`} ${ arrayBikes[i].name}`))
-    arrayBikes[i].weight = userWeightInput
+for (let i = 0; i < numeroBici; i++) {
+    let bikeName = prompt(`Inserisci il nome della bici ${i + 1}`);
+    let bikeWeightInput = Number(prompt(`Inserisci il peso della bici: ${bikeName}`));
+    arrayBikes.push({
+        name: bikeName,
+        weight: bikeWeightInput
+    })
 }
 
 
 
 let lighterBike = arrayBikes[0]
 
-for (let i=1; i < arrayBikes.length; i++){
-    if(arrayBikes[i].weight < lighterBike.weight){
+for (let i = 1; i < arrayBikes.length; i++) {
+    if (arrayBikes[i].weight < lighterBike.weight) {
         lighterBike = arrayBikes[i]
     }
 }
 
-    alert(`la bici piu leggera è ${lighterBike.name} con peso di ${lighterBike.weight}`)
-    console.log(`la bici piu leggera è ${lighterBike.name} con peso di ${lighterBike.weight}`);
-    
-     
+alert(`la bici piu leggera è ${lighterBike.name} con peso di ${lighterBike.weight}`)
+console.log(`la bici piu leggera è ${lighterBike.name} con peso di ${lighterBike.weight}`);
+
+
 
 
 // Snack2
@@ -76,32 +62,32 @@ function getNumberFoul() {
 let numeroSquadre = Number(prompt("Quante squadre vuoi inserire?"));
 
 const footballTeam = []
-for (let i = 0; i < numeroSquadre; i++){
-     let teamName = prompt(`Inserisci il nome della squadra ${i + 1}`);
+for (let i = 0; i < numeroSquadre; i++) {
+    let teamName = prompt(`Inserisci il nome della squadra ${i + 1}`);
     footballTeam.push({
         name: teamName,
-        value: "",
+        score: "",
         foul: ""
     })
 }
 
 
 
-    console.log(`questo è il primo array di squadre`);
-    
-    console.log(footballTeam);
-    
+console.log(`questo è il primo array di squadre`);
 
-    let footballTeam2 = []
+console.log(footballTeam);
 
-for (let i=0; i < footballTeam.length; i++){
+
+let footballTeam2 = []
+
+for (let i = 0; i < footballTeam.length; i++) {
     footballTeam[i].score = getNumberScore()
     footballTeam[i].foul = getNumberFoul()
-     footballTeam2.push({
+    footballTeam2.push({
         name: footballTeam[i].name,
         foul: footballTeam[i].foul
 
-     })
+    })
 }
 
 console.log(`questo è il secondo array di squadre`);
