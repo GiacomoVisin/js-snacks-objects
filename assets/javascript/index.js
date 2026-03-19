@@ -5,6 +5,8 @@
 // Stampare a schermo la bici con peso minore.
 
 
+ 
+let msg = alert(`inserisci i dati del primo array`)
 
 
 
@@ -45,8 +47,10 @@ for (let i=1; i < arrayBikes.length; i++){
     }
 }
 
-    console.log(`la bici piu leggera è ${lighterBike.name} con peso di ${lighterBike.weight}`)
+    alert(`la bici piu leggera è ${lighterBike.name} con peso di ${lighterBike.weight}`)
+    console.log(`la bici piu leggera è ${lighterBike.name} con peso di ${lighterBike.weight}`);
     
+     
 
 
 // Snack2
@@ -57,6 +61,8 @@ for (let i=1; i < arrayBikes.length; i++){
 // Infine, creiamo un nuovo array i cui elementi contengono solo nomi e falli subiti e stampiamo tutto in console.
 
 
+let msg2 = alert(`inserisci i dati del primo array di squadre`)
+
 // function for score and foul value
 
 function getNumberScore() {
@@ -64,40 +70,41 @@ function getNumberScore() {
 }
 
 function getNumberFoul() {
-    return Math.floor(Math.random() * 9) + 1;
+    return Math.floor(Math.random() * 30) + 1;
+}
+
+let numeroSquadre = Number(prompt("Quante squadre vuoi inserire?"));
+
+const footballTeam = []
+for (let i = 0; i < numeroSquadre; i++){
+     let teamName = prompt(`Inserisci il nome della squadra ${i + 1}`);
+    footballTeam.push({
+        name: teamName,
+        value: "",
+        foul: ""
+    })
 }
 
 
 
+    console.log(`questo è il primo array di squadre`);
+    
+    console.log(footballTeam);
+    
 
-const footballTeam = [
-    {
-        name: Juventus,
-        score: 0,
-        foul: 0
-    },
-    {
-        name: Napoli,
-        score: 0,
-        foul: 0
-    },
-    {
-        name: Milan,
-        score: 0,
-        foul: 0
-    },
-    {
-        name: Inter,
-        score: 0,
-        foul: 0
-    },
-    {
-        name: Roma,
-        score: 0,
-        foul: 0
-    }
-]
+    let footballTeam2 = []
 
 for (let i=0; i < footballTeam.length; i++){
+    footballTeam[i].score = getNumberScore()
+    footballTeam[i].foul = getNumberFoul()
+     footballTeam2.push({
+        name: footballTeam[i].name,
+        foul: footballTeam[i].foul
 
+     })
 }
+
+console.log(`questo è il secondo array di squadre`);
+console.log(footballTeam2);
+
+
