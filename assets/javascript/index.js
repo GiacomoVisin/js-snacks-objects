@@ -37,7 +37,15 @@ for (let i = 0; i < arrayBikes.length; i++){
 
 
 
+let lighterBike = arrayBikes[0]
 
+for (let i=1; i < arrayBikes.length; i++){
+    if(arrayBikes[i].weight < lighterBike.weight){
+        lighterBike = arrayBikes[i]
+    }
+}
+
+    console.log(`la bici piu leggera è ${lighterBike.name} con peso di ${lighterBike.weight}`)
     
 
     
