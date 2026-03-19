@@ -57,6 +57,19 @@ for (let i=1; i < arrayBikes.length; i++){
 // Infine, creiamo un nuovo array i cui elementi contengono solo nomi e falli subiti e stampiamo tutto in console.
 
 
+// function for score and foul value
+
+function getNumberScore() {
+    return Math.floor(Math.random() * 9) + 1;
+}
+
+function getNumberFoul() {
+    return Math.floor(Math.random() * 9) + 1;
+}
+
+
+
+
 const footballTeam = [
     {
         name: Juventus,
@@ -85,4 +98,6 @@ const footballTeam = [
     }
 ]
 
+for (let i=0; i < footballTeam.length; i++){
 
+}
